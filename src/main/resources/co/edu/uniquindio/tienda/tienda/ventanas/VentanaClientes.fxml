@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: F5EDF0;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.tienda.tienda.viewController.VentanaClientesController">
+   <children>
+      <ImageView fx:id="btnBuscar" fitHeight="75.0" fitWidth="75.0" layoutX="74.0" layoutY="27.0" onMouseClicked="#onBuscarCliente">
+         <image>
+            <Image url="@../recursos/Lupa.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtBuscar" layoutX="177.0" layoutY="40.0" prefHeight="50.0" prefWidth="550.0" promptText="Identificacion del cliente">
+         <font>
+            <Font name="Bookman Old Style" size="24.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtNumIdentificacion" layoutX="545.0" layoutY="256.0" prefHeight="50.0" prefWidth="188.0" promptText="Identificacion">
+         <font>
+            <Font name="Bookman Old Style" size="24.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtDireccion" layoutX="545.0" layoutY="362.0" prefHeight="50.0" prefWidth="188.0" promptText="Dirección">
+         <font>
+            <Font name="Bookman Old Style" size="24.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtNombre" layoutX="545.0" layoutY="161.0" prefHeight="50.0" prefWidth="188.0" promptText="Nombre">
+         <font>
+            <Font name="Bookman Old Style" size="24.0" />
+         </font>
+      </TextField>
+      <ImageView fx:id="btnEditar" fitHeight="75.0" fitWidth="75.0" layoutX="415.0" layoutY="349.0" onMouseClicked="#onEditarCliente">
+         <image>
+            <Image url="@../recursos/Editar.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="btnEliminar" fitHeight="75.0" fitWidth="75.0" layoutX="415.0" layoutY="243.0" onMouseClicked="#onEliminarCliente">
+         <image>
+            <Image url="@../recursos/Borrar.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="btnCrear" fitHeight="83.0" fitWidth="83.0" layoutX="411.0" layoutY="135.0" onMouseClicked="#onCrearCliente">
+         <image>
+            <Image url="@../recursos/Crear.png" />
+         </image>
+      </ImageView>
+      <ScrollPane layoutX="28.0" layoutY="124.0" prefHeight="350.0" prefWidth="350.0">
+         <content>
+            <TableView fx:id="tablaClientes" prefHeight="350.0" prefWidth="350.0">
+               <columns>
+                  <TableColumn fx:id="colNombre" prefWidth="75.0" text="Nombre" />
+                  <TableColumn fx:id="colDireccion" prefWidth="75.0" text="Identificación" />
+                  <TableColumn fx:id="colNumIdentificacion" prefWidth="75.0" text="Direcció" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
