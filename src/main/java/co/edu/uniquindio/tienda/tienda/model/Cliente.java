@@ -12,6 +12,7 @@ import java.util.Objects;
 @Data
 @NoArgsConstructor
 @SuppressWarnings("ALL")
+//Te quiero
 public class Cliente {
 
     private String nombre;
